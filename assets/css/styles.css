@@ -1738,11 +1738,12 @@ h2 {
   }
 
   .meeting-content-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .meeting-toc {
     position: static;
+    min-width: 0;
     padding: 1.2rem;
     background: var(--paper-deep);
     border-top-color: var(--accent);
@@ -1750,6 +1751,7 @@ h2 {
 
   .meeting-toc nav {
     display: flex;
+    max-width: 100%;
     overflow-x: auto;
     gap: 1.2rem;
     scrollbar-width: thin;
