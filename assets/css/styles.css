@@ -489,6 +489,83 @@ h2 {
   margin-bottom: 0;
 }
 
+.instructors-section {
+  background: var(--paper-deep);
+}
+
+.instructors-layout {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: center;
+}
+
+.instructor-photo-placeholder {
+  position: relative;
+  display: grid;
+  min-height: clamp(22rem, 42vw, 34rem);
+  padding: 2rem;
+  place-content: center;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, transparent 49.7%, rgb(255 255 255 / 14%) 50%, transparent 50.3%),
+    linear-gradient(45deg, transparent 49.7%, rgb(255 255 255 / 10%) 50%, transparent 50.3%),
+    var(--navy);
+  border: 1px solid rgb(20 33 61 / 18%);
+  text-align: center;
+}
+
+.instructor-photo-placeholder::after {
+  position: absolute;
+  inset: 1.2rem;
+  border: 1px solid rgb(255 255 255 / 24%);
+  content: "";
+  pointer-events: none;
+}
+
+.placeholder-initials {
+  display: block;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 1;
+}
+
+.placeholder-label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.instructors-copy h2 {
+  max-width: 680px;
+}
+
+.instructors-copy > p:last-child {
+  max-width: 62ch;
+  margin-bottom: 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+}
+
+.instructors-names {
+  margin: 2rem 0 1.3rem;
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.instructors-names i {
+  margin-inline: 0.45rem;
+  color: var(--accent);
+}
+
 .section-dark {
   color: var(--white);
   background: var(--navy-deep);
@@ -1258,6 +1335,106 @@ h2 {
   color: var(--ink-soft);
 }
 
+.comparison-grid {
+  display: grid;
+  margin-block: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  color: var(--white);
+  background: var(--navy);
+}
+
+.comparison-grid article {
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.comparison-grid article + article {
+  border-left: 1px solid rgb(255 255 255 / 18%);
+}
+
+.comparison-grid .comparison-author {
+  margin-bottom: 2.5rem;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.comparison-grid h3 {
+  margin-bottom: 1rem;
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 500;
+}
+
+.comparison-grid p:last-child {
+  margin-bottom: 0;
+  color: #c7cdd9;
+}
+
+.comparison-rows {
+  margin: 0 0 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.comparison-rows > div {
+  display: grid;
+  padding-block: 1.25rem;
+  grid-template-columns: 9rem 1fr 1fr;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.comparison-rows dt {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.comparison-rows dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.verdict-roles {
+  display: grid;
+  margin: 2rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--white);
+  background: var(--navy);
+}
+
+.verdict-roles section {
+  min-height: 15rem;
+  padding: 1.7rem;
+  border-right: 1px solid rgb(255 255 255 / 18%);
+}
+
+.verdict-roles section:last-child {
+  border-right: 0;
+}
+
+.verdict-roles span {
+  display: block;
+  margin-bottom: 2.5rem;
+  color: var(--gold);
+  font-family: var(--serif);
+}
+
+.verdict-roles h4 {
+  margin-bottom: 0.6rem;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+}
+
+.verdict-roles p {
+  margin-bottom: 0;
+  color: #c7cdd9;
+  font-size: 0.86rem;
+}
+
 .question-list {
   margin: 3rem 0 0;
   padding: 0;
@@ -1514,6 +1691,7 @@ h2 {
   }
 
   .split-heading,
+  .instructors-layout,
   .reading-layout,
   .bibliography-layout {
     grid-template-columns: 1fr;
@@ -1715,8 +1893,22 @@ h2 {
 
   .missing-grid,
   .canvas-grid,
+  .comparison-grid,
+  .verdict-roles,
   .deliverable-box {
     grid-template-columns: 1fr;
+  }
+
+  .comparison-grid article + article,
+  .verdict-roles section {
+    border-top: 1px solid rgb(255 255 255 / 18%);
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .comparison-rows > div {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 
   .missing-grid > div:nth-child(odd),
