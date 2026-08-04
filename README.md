@@ -38,6 +38,15 @@ O encontro articula a leitura principal de **Platão, *Fedro*, 274b–277a** ao 
 
 A página oferece resumo detalhado, conceitos-chave, questões para discussão e uma atividade de mapa sociotécnico.
 
+## Encontro 2
+
+O segundo encontro põe em diálogo dois textos fundamentais da filosofia da inteligência artificial:
+
+- TURING, Alan M. Computing Machinery and Intelligence. *Mind*, v. 59, n. 236, p. 433–460, 1950. https://doi.org/10.1093/mind/LIX.236.433
+- SEARLE, John R. Minds, Brains, and Programs. *Behavioral and Brain Sciences*, v. 3, n. 3, p. 417–424, 1980. https://doi.org/10.1017/S0140525X00005756
+
+A página reconstrói o jogo da imitação e o argumento do quarto chinês, compara as posições, reúne conceitos e questões para debate e propõe um tribunal conceitual sobre compreensão em máquinas.
+
 ## Avaliação e uso de IA
 
 A disciplina combina notas de leitura, autópsia epistemológica de uma resposta de IA, debate ou seminário e projeto final. Cada atividade indicará se a IA não é permitida, é permitida com declaração ou é requerida. O estudante permanece responsável pela exatidão, argumentação e autoria.
@@ -48,6 +57,8 @@ A disciplina combina notas de leitura, autópsia epistemológica de uma resposta
 .
 ├── index.html
 ├── encontro-1/
+│   └── index.html
+├── encontro-2/
 │   └── index.html
 ├── assets/
 │   ├── css/styles.css
