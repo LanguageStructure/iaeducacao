@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Encontro 2 de IA e Educação: o jogo da imitação de Alan Turing, o quarto chinês de John Searle e a questão de saber se máquinas podem pensar."
+    />
+    <meta name="theme-color" content="#14213d" />
+    <title>Encontro 2 — As máquinas podem pensar? | IA e Educação</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body class="meeting-page">
+    <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header" data-site-header>
+      <div class="container header-inner">
+        <a class="brand" href="../" aria-label="IA e Educação — página inicial">
+          <span class="brand-mark" aria-hidden="true">IA</span>
+          <span class="brand-text">IA <i>&amp;</i> Educação</span>
+        </a>
+        <button
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-menu-button
+        >
+          <span class="sr-only">Abrir menu</span>
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal" data-menu>
+          <a href="#turing">Turing</a>
+          <a href="#searle">Searle</a>
+          <a href="#comparacao">Comparação</a>
+          <a href="#discussao">Discussão</a>
+          <a href="#atividade">Atividade</a>
+          <a class="nav-cta" href="../">Página do curso</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="meeting-hero" aria-labelledby="meeting-title">
+        <div class="container meeting-hero-layout">
+          <div>
+            <p class="eyebrow">Encontro 2 · inteligência e comportamento</p>
+            <h1 id="meeting-title">As máquinas podem pensar?</h1>
+            <p class="meeting-lead">
+              O comportamento linguístico é evidência suficiente de inteligência? Turing desloca a
+              pergunta para um teste de desempenho; Searle pergunta se executar um programa basta para compreender.
+            </p>
+          </div>
+          <dl class="meeting-meta">
+            <div><dt>Leitura principal</dt><dd>Alan Turing (1950)</dd></div>
+            <div><dt>Complementar</dt><dd>John Searle (1980)</dd></div>
+            <div><dt>Proposta</dt><dd>Debate + tribunal conceitual</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="article-band primary-reading" aria-labelledby="turing-reading-title">
+        <div class="container article-band-layout">
+          <span class="article-mark" aria-hidden="true">A·T</span>
+          <div>
+            <p class="section-kicker">Leitura principal</p>
+            <h2 id="turing-reading-title">Computing Machinery and Intelligence</h2>
+            <p>Alan M. Turing · <em>Mind</em>, 59(236), 433–460, 1950.</p>
+            <div class="article-actions">
+              <a class="text-link" href="https://doi.org/10.1093/mind/LIX.236.433" rel="noreferrer">Abrir artigo pelo DOI <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-band" aria-labelledby="searle-reading-title">
+        <div class="container article-band-layout">
+          <span class="article-mark" aria-hidden="true">J·S</span>
+          <div>
+            <p class="section-kicker">Leitura complementar</p>
+            <h2 id="searle-reading-title">Minds, Brains, and Programs</h2>
+            <p>John R. Searle · <em>Behavioral and Brain Sciences</em>, 3(3), 417–424, 1980.</p>
+            <div class="article-actions">
+              <a class="text-link" href="https://doi.org/10.1017/S0140525X00005756" rel="noreferrer">Abrir artigo pelo DOI <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container meeting-content-layout">
+        <aside class="meeting-toc" aria-label="Nesta página">
+          <p>Neste encontro</p>
+          <nav>
+            <a href="#ponto-partida">Ponto de partida</a>
+            <a href="#turing">Turing</a>
+            <a href="#searle">Searle</a>
+            <a href="#comparacao">Comparação</a>
+            <a href="#conceitos">Conceitos-chave</a>
+            <a href="#discussao">Questões</a>
+            <a href="#atividade">Atividade</a>
+            <a href="#fechamento">Síntese</a>
+          </nav>
+        </aside>
+
+        <article class="meeting-article">
+          <section id="ponto-partida" class="content-section">
+            <p class="section-kicker">Ponto de partida</p>
+            <h2>Uma pergunta simples, muitos critérios possíveis</h2>
+            <p class="lead-paragraph">
+              Dizer que uma máquina “pensa” pode significar coisas diferentes: produzir respostas
+              indistinguíveis das humanas, resolver problemas, representar o mundo, compreender
+              significados ou possuir estados mentais. Antes de responder, precisamos decidir o que contaria como evidência.
+            </p>
+            <div class="thesis-box">
+              <p class="thesis-label">Questão norteadora</p>
+              <p>
+                Se uma máquina conversa de modo convincente, devemos atribuir-lhe inteligência — ou
+                estamos confundindo <strong>desempenho observável</strong> com <strong>compreensão</strong>?
+              </p>
+            </div>
+            <p>
+              Os dois textos não são apenas respostas rivais. Eles focalizam problemas diferentes.
+              Turing procura substituir uma questão mal definida por uma investigação operacional;
+              Searle procura mostrar que certo tipo de explicação computacional é insuficiente para a mente.
+            </p>
+          </section>
+
+          <section id="turing" class="content-section">
+            <p class="section-kicker">Alan Turing · 1950</p>
+            <h2>Do “pensar” ao jogo da imitação</h2>
+            <p>
+              Turing abre o artigo com a pergunta “As máquinas podem pensar?”, mas considera que os
+              termos <em>máquina</em> e <em>pensar</em> conduziriam a uma disputa de definições. Em seu lugar,
+              propõe o jogo da imitação: uma pessoa interrogadora mantém conversas por texto com participantes
+              que não vê e tenta determinar quem é humano e quem é máquina.
+            </p>
+
+            <div class="thread-list">
+              <section class="thread-item">
+                <span>01</span>
+                <div>
+                  <h3>Um critério operacional</h3>
+                  <p>
+                    A reformulação desloca o debate da essência invisível do pensamento para uma situação
+                    pública e avaliável. O que importa no jogo é a capacidade de sustentar uma interação
+                    linguística suficientemente rica para que o desempenho não possa ser distinguido com segurança do humano.
+                  </p>
+                  <p>
+                    Isso não transforma automaticamente o teste em definição completa de inteligência. O jogo
+                    funciona como proposta de investigação: substitui uma pergunta vaga por condições observáveis.
+                  </p>
+                </div>
+              </section>
+
+              <section class="thread-item">
+                <span>02</span>
+                <div>
+                  <h3>Por que a conversa?</h3>
+                  <p>
+                    Uma conversa aberta exige mobilizar conhecimentos, acompanhar contexto, responder a objeções,
+                    lidar com ambiguidades e produzir explicações. Para Turing, esse repertório torna o jogo mais
+                    exigente que uma tarefa estreita e evita privilegiar a aparência física da máquina.
+                  </p>
+                  <p>
+                    A mediação textual é decisiva: a pessoa julgadora avalia respostas, não materiais, voz ou corpo.
+                    Ao mesmo tempo, isso deixa aberta a questão de saber quanto inteligência depende de percepção e ação no mundo.
+                  </p>
+                </div>
+              </section>
+
+              <section class="thread-item">
+                <span>03</span>
+                <div>
+                  <h3>Objeções e deslocamentos</h3>
+                  <p>
+                    O artigo examina objeções teológicas, matemáticas, psicológicas e filosóficas, além do argumento
+                    de que máquinas apenas fazem o que lhes foi ordenado. Turing responde mostrando que limitações
+                    ou surpresas não pertencem exclusivamente às máquinas e que muitas objeções exigem mais investigação.
+                  </p>
+                  <p>
+                    Sua estratégia é metodológica: em vez de exigir certeza prévia sobre outras mentes, aplica ao caso
+                    das máquinas critérios comparáveis aos que usamos em nossas relações com outras pessoas.
+                  </p>
+                </div>
+              </section>
+
+              <section class="thread-item">
+                <span>04</span>
+                <div>
+                  <h3>Máquinas que aprendem</h3>
+                  <p>
+                    Turing encerra propondo construir uma “máquina-criança” e educá-la, em vez de programar diretamente
+                    uma mente adulta. A ideia antecipa a passagem de regras totalmente especificadas para sistemas cujo
+                    comportamento se transforma por treinamento, recompensa, experiência e experimentação.
+                  </p>
+                  <p>
+                    A analogia educacional é provocadora, mas deve ser usada com cuidado: treinamento computacional e
+                    aprendizagem humana não são processos idênticos apenas porque compartilham vocabulário.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div class="implication-box">
+              <p class="thesis-label">Cuidado interpretativo</p>
+              <h3>Turing não oferece uma lista de frases para “enganar” alguém.</h3>
+              <p>
+                O valor filosófico do jogo está em tornar explícitos nossos critérios de atribuição de inteligência.
+                Passar em uma conversa curta, preparada ou restrita não resolve por si só todas as questões sobre mente.
+              </p>
+            </div>
+          </section>
+
+          <section id="searle" class="content-section">
+            <p class="section-kicker">John Searle · 1980</p>
+            <h2>O quarto chinês e a diferença entre sintaxe e semântica</h2>
+            <p>
+              Searle dirige sua crítica à chamada <strong>IA forte</strong>: a tese de que um computador com o
+              programa correto não apenas simula capacidades mentais, mas literalmente compreende e possui estados cognitivos.
+              Seu alvo não é a utilidade de computadores nem a possibilidade de máquinas terem mente em qualquer sentido.
+            </p>
+
+            <div class="thread-list">
+              <section class="thread-item">
+                <span>01</span>
+                <div>
+                  <h3>O experimento mental</h3>
+                  <p>
+                    Imagine uma pessoa que não conhece chinês fechada em um quarto. Ela recebe símbolos chineses,
+                    consulta regras escritas em uma língua que domina e devolve outros símbolos. Se as regras forem
+                    sofisticadas, suas respostas podem parecer as de alguém fluente para observadores externos.
+                  </p>
+                  <p>
+                    Ainda assim, argumenta Searle, a pessoa apenas manipula formas segundo instruções; não sabe o que
+                    os símbolos significam. O desempenho global pode ser apropriado sem que o executor das regras compreenda chinês.
+                  </p>
+                </div>
+              </section>
+
+              <section class="thread-item">
+                <span>02</span>
+                <div>
+                  <h3>Sintaxe não basta para semântica</h3>
+                  <p>
+                    Um programa é definido formalmente: especifica operações sobre símbolos por suas propriedades
+                    sintáticas. A compreensão, porém, envolve conteúdo ou significado. O argumento central sustenta
+                    que a execução do programa, tomada isoladamente, não é suficiente para produzir semântica e intencionalidade.
+                  </p>
+                </div>
+              </section>
+
+              <section class="thread-item">
+                <span>03</span>
+                <div>
+                  <h3>A resposta do sistema</h3>
+                  <p>
+                    Uma objeção afirma que a pessoa não compreende chinês, mas o sistema inteiro — pessoa, regras,
+                    registros e quarto — compreende. Searle responde imaginando a pessoa internalizando todos os
+                    elementos e ainda executando as regras sem conhecer o significado dos símbolos.
+                  </p>
+                  <p>
+                    A disputa revela um ponto decisivo: em que nível atribuímos compreensão — a uma parte, ao sistema
+                    organizado, à interação com o mundo ou a uma história de aprendizagem?
+                  </p>
+                </div>
+              </section>
+
+              <section class="thread-item">
+                <span>04</span>
+                <div>
+                  <h3>Corpo, mundo e causalidade</h3>
+                  <p>
+                    Outras respostas propõem instalar o programa em um robô capaz de perceber e agir, ou simular
+                    processos cerebrais. Para Searle, acrescentar entradas e saídas ainda não resolve o problema se o
+                    núcleo explicativo continuar sendo apenas a manipulação formal de símbolos.
+                  </p>
+                  <p>
+                    Seus críticos, por outro lado, veem justamente no sistema completo, incorporado e situado, a melhor
+                    oportunidade para explicar como significados podem emergir. O experimento não encerra o debate; ele o organiza.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div class="implication-box">
+              <p class="thesis-label">Cuidado interpretativo</p>
+              <h3>A conclusão é mais limitada que “máquinas nunca pensarão”.</h3>
+              <p>
+                Searle argumenta que <strong>executar um programa não é, por si só, condição suficiente para compreender</strong>.
+                Uma máquina poderia ter mente se possuísse capacidades causais adequadas; o ponto é que o programa formal sozinho não a garante.
+              </p>
+            </div>
+          </section>
+
+          <section id="comparacao" class="content-section">
+            <p class="section-kicker">Leitura comparada</p>
+            <h2>Dois autores, dois níveis de pergunta</h2>
+            <div class="comparison-grid">
+              <article>
+                <p class="comparison-author">Turing</p>
+                <h3>Que desempenho justificaria a atribuição?</h3>
+                <p>
+                  Privilegia um critério público e operacional. Interroga nossas práticas de reconhecer inteligência
+                  a partir de comportamento complexo, sem exigir acesso direto a uma vida mental interna.
+                </p>
+              </article>
+              <article>
+                <p class="comparison-author">Searle</p>
+                <h3>Que mecanismo explicaria compreensão?</h3>
+                <p>
+                  Questiona se desempenho e execução formal bastam. Distingue a produção correta de símbolos da posse
+                  de significado e de estados mentais dirigidos a objetos e situações.
+                </p>
+              </article>
+            </div>
+
+            <dl class="comparison-rows">
+              <div>
+                <dt>Problema</dt>
+                <dd><strong>Turing:</strong> como investigar uma pergunta conceitualmente vaga?</dd>
+                <dd><strong>Searle:</strong> um programa pode constituir compreensão?</dd>
+              </div>
+              <div>
+                <dt>Estratégia</dt>
+                <dd><strong>Turing:</strong> jogo da imitação e critérios observáveis.</dd>
+                <dd><strong>Searle:</strong> experimento mental e análise conceitual.</dd>
+              </div>
+              <div>
+                <dt>Foco</dt>
+                <dd><strong>Turing:</strong> competência manifestada em interação.</dd>
+                <dd><strong>Searle:</strong> condições de significado e intencionalidade.</dd>
+              </div>
+              <div>
+                <dt>Risco</dt>
+                <dd><strong>Turing:</strong> tomar imitação limitada como prova total.</dd>
+                <dd><strong>Searle:</strong> localizar a compreensão apenas em uma parte do sistema.</dd>
+              </div>
+            </dl>
+
+            <div class="thesis-box">
+              <p class="thesis-label">Tensão produtiva</p>
+              <p>
+                Podemos ter razões práticas para tratar um sistema como inteligente sem ter uma explicação satisfatória
+                de sua compreensão? E uma explicação da mente deve começar pelo comportamento, pela arquitetura interna,
+                pela relação com o mundo — ou pela combinação desses níveis?
+              </p>
+            </div>
+          </section>
+
+          <section id="conceitos" class="content-section">
+            <p class="section-kicker">Vocabulário do encontro</p>
+            <h2>Conceitos-chave</h2>
+            <dl class="concept-list">
+              <div>
+                <dt>Jogo da imitação</dt>
+                <dd>Situação proposta por Turing para investigar a capacidade de uma máquina sustentar interação linguística comparável à humana.</dd>
+              </div>
+              <div>
+                <dt>Critério operacional</dt>
+                <dd>Forma de tratar um conceito por meio de procedimentos e condições observáveis de aplicação.</dd>
+              </div>
+              <div>
+                <dt>IA forte</dt>
+                <dd>Na formulação criticada por Searle, tese de que o programa adequado literalmente constitui mente e compreensão.</dd>
+              </div>
+              <div>
+                <dt>IA fraca</dt>
+                <dd>Uso do computador como instrumento poderoso para simular, modelar ou investigar processos cognitivos, sem afirmar que ele possua mente.</dd>
+              </div>
+              <div>
+                <dt>Sintaxe</dt>
+                <dd>Regras formais de organização e transformação de símbolos, consideradas sem referência necessária ao que significam.</dd>
+              </div>
+              <div>
+                <dt>Semântica</dt>
+                <dd>Dimensão do significado: aquilo a que expressões, representações ou pensamentos se referem e o conteúdo que possuem.</dd>
+              </div>
+              <div>
+                <dt>Intencionalidade</dt>
+                <dd>Característica de estados mentais serem sobre ou dirigidos a objetos, acontecimentos e situações.</dd>
+              </div>
+              <div>
+                <dt>Compreensão</dt>
+                <dd>Capacidade disputada de apreender significados e mobilizá-los de modo situado, não apenas produzir sequências formalmente adequadas.</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section id="discussao" class="content-section discussion-section">
+            <p class="section-kicker">Seminário</p>
+            <h2>Questões para discussão</h2>
+            <ol class="question-list">
+              <li><span>01</span><p>O jogo da imitação mede inteligência, competência linguística ou apenas capacidade de imitação?</p></li>
+              <li><span>02</span><p>Que evidências usamos para atribuir compreensão a outras pessoas? Podemos exigir das máquinas algo diferente?</p></li>
+              <li><span>03</span><p>Uma conversa breve com um modelo de linguagem seria uma versão adequada do teste de Turing? O que faltaria controlar?</p></li>
+              <li><span>04</span><p>No quarto chinês, quem é o candidato à compreensão: a pessoa, o programa, o quarto inteiro ou ninguém?</p></li>
+              <li><span>05</span><p>A interação corporal e social com o mundo poderia responder à objeção de Searle? Por quê?</p></li>
+              <li><span>06</span><p>Há diferença educacional entre receber uma explicação de quem compreende e receber a mesma explicação de quem apenas a produz corretamente?</p></li>
+              <li><span>07</span><p>Que riscos surgem quando estudantes ou docentes atribuem intenção, autoridade ou empatia a um sistema conversacional?</p></li>
+              <li><span>08</span><p>Para decidir se uma IA deve atuar na educação, precisamos primeiro decidir se ela pensa?</p></li>
+            </ol>
+          </section>
+
+          <section id="atividade" class="content-section activity-section">
+            <p class="section-kicker">Atividade · 60 minutos</p>
+            <h2>Tribunal conceitual: a máquina compreende?</h2>
+            <p class="lead-paragraph">
+              A turma julgará uma afirmação precisa: “Este sistema compreende o conteúdo que explica”.
+              O objetivo não é adivinhar uma vida interior, mas explicitar critérios, evidências e limites da conclusão.
+            </p>
+
+            <div class="verdict-roles" aria-label="Papéis da atividade">
+              <section>
+                <span>01</span>
+                <h4>Defesa</h4>
+                <p>Constrói o argumento mais forte a favor da atribuição de compreensão, mobilizando Turing e evidências do caso.</p>
+              </section>
+              <section>
+                <span>02</span>
+                <h4>Contestação</h4>
+                <p>Reconstrói a objeção mais forte, mobilizando Searle e propondo explicações alternativas para o desempenho.</p>
+              </section>
+              <section>
+                <span>03</span>
+                <h4>Conselho</h4>
+                <p>Formula perguntas, distingue alegações e produz um veredito provisório com grau de confiança.</p>
+              </section>
+            </div>
+
+            <div class="activity-steps">
+              <section>
+                <p class="step-time">10 min</p>
+                <div>
+                  <h3>Construir o caso</h3>
+                  <p>Em conjunto, escolham ou produzam uma conversa curta com um chatbot sobre um conceito do curso. Registrem a pergunta, a resposta e o contexto.</p>
+                </div>
+              </section>
+              <section>
+                <p class="step-time">15 min</p>
+                <div>
+                  <h3>Preparar as posições</h3>
+                  <p>Defesa e contestação selecionam duas evidências, formulam seu critério de compreensão e antecipam uma objeção. O conselho prepara perguntas.</p>
+                </div>
+              </section>
+              <section>
+                <p class="step-time">20 min</p>
+                <div>
+                  <h3>Ouvir e interrogar</h3>
+                  <p>Cada lado apresenta por cinco minutos; o conselho usa os dez minutos seguintes para testar pressupostos, contradições e alcance das conclusões.</p>
+                </div>
+              </section>
+              <section>
+                <p class="step-time">10 min</p>
+                <div>
+                  <h3>Redigir o veredito</h3>
+                  <p>O conselho decide entre “justificado”, “não justificado” ou “evidência insuficiente” e explica qual observação poderia fazê-lo rever a decisão.</p>
+                </div>
+              </section>
+              <section>
+                <p class="step-time">5 min</p>
+                <div>
+                  <h3>Traduzir para a educação</h3>
+                  <p>A turma registra uma consequência pedagógica da decisão: o que muda — ou não — no uso do sistema como explicador, tutor ou avaliador?</p>
+                </div>
+              </section>
+            </div>
+
+            <div class="map-canvas">
+              <div class="canvas-heading">
+                <p class="section-kicker">Ficha do veredito</p>
+                <h3>Quatro campos obrigatórios</h3>
+              </div>
+              <div class="canvas-grid">
+                <section><span>1</span><h4>Alegação</h4><p>Que tipo de compreensão está sendo atribuído e a quem exatamente?</p></section>
+                <section><span>2</span><h4>Critério</h4><p>Que condição permitiria atribuí-la de forma consistente a humanos e máquinas?</p></section>
+                <section><span>3</span><h4>Evidência</h4><p>Que aspecto observável do caso sustenta ou enfraquece a atribuição?</p></section>
+                <section><span>4</span><h4>Limite</h4><p>O que a evidência não permite concluir e o que poderia mudar o veredito?</p></section>
+              </div>
+            </div>
+
+            <div class="deliverable-box">
+              <h3>Entrega do grupo</h3>
+              <p>
+                Um veredito de até 250 palavras que apresente critério, duas evidências, uma objeção,
+                grau de confiança e uma consequência para o uso educacional do sistema.
+              </p>
+            </div>
+          </section>
+
+          <section id="fechamento" class="content-section closing-section">
+            <p class="section-kicker">Síntese</p>
+            <h2>Três ideias para fechar o encontro</h2>
+            <ol class="takeaway-list">
+              <li><span>1</span><p><strong>Atribuir inteligência exige critérios.</strong> Turing torna esses critérios públicos e discutíveis por meio do desempenho.</p></li>
+              <li><span>2</span><p><strong>Desempenho e compreensão não são sinônimos.</strong> Searle desafia a passagem da manipulação formal de símbolos ao significado.</p></li>
+              <li><span>3</span><p><strong>A decisão educacional permanece.</strong> Mesmo sem resolver a metafísica da mente, precisamos avaliar usos, evidências, riscos e responsabilidades.</p></li>
+            </ol>
+            <div class="next-meeting">
+              <p>Próximo encontro</p>
+              <h3>O que é um modelo de linguagem?</h3>
+              <a class="text-link" href="../encontro-3/">Ir para o Encontro 3 <span>→</span></a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div>
+          <p class="footer-brand">IA <i>&amp;</i> Educação</p>
+          <p>IA e Educação: conhecimento, aprendizagem e formação.</p>
+        </div>
+        <div>
+          <p>Dr. Fabrício Ferraz Gerardi · Dra. Cristiane Poltronieri</p>
+          <a href="../">Página inicial</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
