@@ -82,4 +82,21 @@
     link.innerHTML = `${config.label} <span>→</span>`;
     content.appendChild(link);
   });
+
+  if (window.location.pathname.includes("/encontro-3/")) {
+    const papagaios = document.querySelector("#papagaios");
+    const firstThreadList = papagaios?.querySelector(".thread-list");
+    if (papagaios && firstThreadList && !papagaios.querySelector("[data-mental-states-definition]")) {
+      const definition = document.createElement("div");
+      definition.className = "implication-box";
+      definition.dataset.mentalStatesDefinition = "true";
+      definition.innerHTML = `
+        <p class="thesis-label">Definição</p>
+        <h3>O que são estados mentais?</h3>
+        <p><strong>Estados mentais</strong> são condições ou episódios atribuídos a uma mente, como crenças, desejos, intenções, percepções, emoções, lembranças, expectativas e experiências conscientes. Em filosofia da mente, atribuir um estado mental a um agente significa atribuir-lhe algo que possui conteúdo ou perspectiva e que pode ajudar a explicar seu comportamento.</p>
+        <p>Não se deve, portanto, confundir <strong>estado mental</strong> com <strong>estado interno de um sistema computacional</strong>. Uma rede neural possui estados internos — ativações, vetores e configurações numéricas —, mas permanece uma questão filosófica se esses estados também devem ser interpretados como crenças, intenções, compreensão ou consciência.</p>
+      `;
+      firstThreadList.before(definition);
+    }
+  }
 })();
