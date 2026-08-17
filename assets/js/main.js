@@ -63,4 +63,23 @@
       copyButton.textContent = "Não foi possível copiar";
     }
   });
+
+  const meetingLinks = {
+    "04": { href: "encontro-4/", label: "Acessar roteiro, questões e atividade" },
+    "05": { href: "encontro-5/", label: "Acessar roteiro, conceitos e atividade" },
+  };
+
+  document.querySelectorAll(".timeline-item").forEach((item) => {
+    const number = item.querySelector(".timeline-index span")?.textContent?.trim();
+    const config = meetingLinks[number];
+    const content = item.querySelector(".timeline-content");
+    if (!config || !content || content.querySelector(".text-link")) return;
+
+    item.classList.add("is-featured");
+    const link = document.createElement("a");
+    link.className = "text-link";
+    link.href = config.href;
+    link.innerHTML = `${config.label} <span>→</span>`;
+    content.appendChild(link);
+  });
 })();
