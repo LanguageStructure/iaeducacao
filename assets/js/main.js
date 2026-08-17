@@ -19,21 +19,14 @@
       menu.classList.toggle("is-open", !isOpen);
       document.body.classList.toggle("menu-open", !isOpen);
     });
-
     menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeMenu();
-    });
-
+    document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
     const desktopQuery = window.matchMedia("(min-width: 901px)");
-    desktopQuery.addEventListener("change", (event) => {
-      if (event.matches) closeMenu();
-    });
+    desktopQuery.addEventListener("change", (event) => { if (event.matches) closeMenu(); });
   }
 
   const updateScrollState = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 12);
-
     const progress = document.querySelector("[data-reading-progress]");
     if (progress) {
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -41,40 +34,30 @@
       progress.style.width = `${percentage}%`;
     }
   };
-
   updateScrollState();
   window.addEventListener("scroll", updateScrollState, { passive: true });
 
-  document.querySelectorAll("[data-current-year]").forEach((item) => {
-    item.textContent = String(new Date().getFullYear());
-  });
+  document.querySelectorAll("[data-current-year]").forEach((item) => { item.textContent = String(new Date().getFullYear()); });
 
   const copyButton = document.querySelector("[data-copy-citation]");
   copyButton?.addEventListener("click", async () => {
-    const citation =
-      "WILLIAMSON, Ben; EYNON, Rebecca. Historical threads, missing links, and future directions in AI in education. Learning, Media and Technology, v. 45, n. 3, p. 223–235, 2020. https://doi.org/10.1080/17439884.2020.1798995";
+    const citation = "WILLIAMSON, Ben; EYNON, Rebecca. Historical threads, missing links, and future directions in AI in education. Learning, Media and Technology, v. 45, n. 3, p. 223–235, 2020. https://doi.org/10.1080/17439884.2020.1798995";
     try {
       await navigator.clipboard.writeText(citation);
       copyButton.textContent = "Referência copiada";
-      window.setTimeout(() => {
-        copyButton.textContent = "Copiar referência";
-      }, 2400);
-    } catch {
-      copyButton.textContent = "Não foi possível copiar";
-    }
+      window.setTimeout(() => { copyButton.textContent = "Copiar referência"; }, 2400);
+    } catch { copyButton.textContent = "Não foi possível copiar"; }
   });
 
   const meetingLinks = {
     "04": { href: "encontro-4/", label: "Acessar roteiro, questões e atividade" },
     "05": { href: "encontro-5/", label: "Acessar roteiro, conceitos e atividade" },
   };
-
   document.querySelectorAll(".timeline-item").forEach((item) => {
     const number = item.querySelector(".timeline-index span")?.textContent?.trim();
     const config = meetingLinks[number];
     const content = item.querySelector(".timeline-content");
     if (!config || !content || content.querySelector(".text-link")) return;
-
     item.classList.add("is-featured");
     const link = document.createElement("a");
     link.className = "text-link";
@@ -82,6 +65,20 @@
     link.innerHTML = `${config.label} <span>→</span>`;
     content.appendChild(link);
   });
+
+  const bibliography = document.querySelector("#bibliografia .bibliography-list");
+  if (bibliography && !bibliography.querySelector("[data-hicks-2024]")) {
+    const reference = document.createElement("article");
+    reference.className = "reference";
+    reference.dataset.hicks2024 = "true";
+    reference.innerHTML = `
+      <h3>Hicks, M. T.; Humphries, J.; Slater, J. (2024)</h3>
+      <p>ChatGPT is bullshit. <em>Ethics and Information Technology</em>, 26, 38.</p>
+      <a href="https://doi.org/10.1007/s10676-024-09775-5" rel="noreferrer">doi:10.1007/s10676-024-09775-5</a>
+    `;
+    const bender = Array.from(bibliography.querySelectorAll(".reference")).find((item) => item.textContent.includes("Bender"));
+    if (bender) bender.after(reference); else bibliography.appendChild(reference);
+  }
 
   if (window.location.pathname.includes("/encontro-3/")) {
     const papagaios = document.querySelector("#papagaios");
