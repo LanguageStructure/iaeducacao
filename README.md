@@ -47,6 +47,15 @@ O segundo encontro põe em diálogo dois textos fundamentais da filosofia da int
 
 A página reconstrói o jogo da imitação e o argumento do quarto chinês, compara as posições, reúne conceitos e questões para debate e propõe um tribunal conceitual sobre compreensão em máquinas.
 
+## Encontro 3
+
+O terceiro encontro apresenta os fundamentos conceituais dos grandes modelos de linguagem e pergunta o que um sistema efetivamente faz quando produz uma resposta.
+
+- BENDER, Emily M.; GEBRU, Timnit; McMILLAN-MAJOR, Angelina; SHMITCHELL, Shmargaret. On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? *FAccT*, 2021. https://doi.org/10.1145/3442188.3445922
+- VASWANI, Ashish et al. Attention Is All You Need. *NeurIPS*, 2017. https://arxiv.org/abs/1706.03762
+
+A página explica probabilidade, tokens, treinamento, embeddings, Transformers, self-attention e geração incremental, além de discutir a crítica dos “papagaios estocásticos” e incluir uma seção sobre pensamento, consciência e inteligência artificial.
+
 ## Encontros 4 e 5
 
 - **Encontro 4 — Verdade, erro e “alucinação”**: factualidade, fidelidade, justificação, a discussão sobre *bullshit* e uma atividade de autópsia epistemológica de respostas de IA.
