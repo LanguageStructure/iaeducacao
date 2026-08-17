@@ -47,6 +47,11 @@ O segundo encontro põe em diálogo dois textos fundamentais da filosofia da int
 
 A página reconstrói o jogo da imitação e o argumento do quarto chinês, compara as posições, reúne conceitos e questões para debate e propõe um tribunal conceitual sobre compreensão em máquinas.
 
+## Encontros 4 e 5
+
+- **Encontro 4 — Verdade, erro e “alucinação”**: factualidade, fidelidade, justificação, a discussão sobre *bullshit* e uma atividade de autópsia epistemológica de respostas de IA.
+- **Encontro 5 — Para que educamos?**: Hannah Arendt e Gert Biesta, mundo comum, natalidade, qualificação, socialização e subjetivação, com uma atividade de desenho de política de uso de IA a partir das finalidades educacionais.
+
 ## Avaliação e uso de IA
 
 A disciplina combina notas de leitura, autópsia epistemológica de uma resposta de IA, debate ou seminário e projeto final. Cada atividade indicará se a IA não é permitida, é permitida com declaração ou é requerida. O estudante permanece responsável pela exatidão, argumentação e autoria.
@@ -59,6 +64,12 @@ A disciplina combina notas de leitura, autópsia epistemológica de uma resposta
 ├── encontro-1/
 │   └── index.html
 ├── encontro-2/
+│   └── index.html
+├── encontro-3/
+│   └── index.html
+├── encontro-4/
+│   └── index.html
+├── encontro-5/
 │   └── index.html
 ├── assets/
 │   ├── css/styles.css
