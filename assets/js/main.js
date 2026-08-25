@@ -52,6 +52,7 @@
   const meetingLinks = {
     "04": { href: "encontro-4/", label: "Acessar roteiro, questões e atividade" },
     "05": { href: "encontro-5/", label: "Acessar roteiro, conceitos e atividade" },
+    "06": { href: "encontro-6/", label: "Acessar roteiro, conceitos e atividade" },
   };
   document.querySelectorAll(".timeline-item").forEach((item) => {
     const number = item.querySelector(".timeline-index span")?.textContent?.trim();
@@ -71,13 +72,25 @@
     const reference = document.createElement("article");
     reference.className = "reference";
     reference.dataset.hicks2024 = "true";
-    reference.innerHTML = `
-      <h3>Hicks, M. T.; Humphries, J.; Slater, J. (2024)</h3>
-      <p>ChatGPT is bullshit. <em>Ethics and Information Technology</em>, 26, 38.</p>
-      <a href="https://doi.org/10.1007/s10676-024-09775-5" rel="noreferrer">doi:10.1007/s10676-024-09775-5</a>
-    `;
+    reference.innerHTML = `<h3>Hicks, M. T.; Humphries, J.; Slater, J. (2024)</h3><p>ChatGPT is bullshit. <em>Ethics and Information Technology</em>, 26, 38.</p><a href="https://doi.org/10.1007/s10676-024-09775-5" rel="noreferrer">doi:10.1007/s10676-024-09775-5</a>`;
     const bender = Array.from(bibliography.querySelectorAll(".reference")).find((item) => item.textContent.includes("Bender"));
     if (bender) bender.after(reference); else bibliography.appendChild(reference);
+  }
+
+  if (bibliography && !bibliography.querySelector("[data-clark-chalmers-1998]")) {
+    const reference = document.createElement("article");
+    reference.className = "reference";
+    reference.dataset.clarkChalmers1998 = "true";
+    reference.innerHTML = `<h3>Clark, A.; Chalmers, D. (1998)</h3><p>The Extended Mind. <em>Analysis</em>, 58(1), 7–19.</p><a href="https://doi.org/10.1093/analys/58.1.7" rel="noreferrer">doi:10.1093/analys/58.1.7</a>`;
+    bibliography.appendChild(reference);
+  }
+
+  if (bibliography && !bibliography.querySelector("[data-risko-gilbert-2016]")) {
+    const reference = document.createElement("article");
+    reference.className = "reference";
+    reference.dataset.riskoGilbert2016 = "true";
+    reference.innerHTML = `<h3>Risko, E. F.; Gilbert, S. J. (2016)</h3><p>Cognitive Offloading. <em>Trends in Cognitive Sciences</em>, 20(9), 676–688.</p><a href="https://doi.org/10.1016/j.tics.2016.07.002" rel="noreferrer">doi:10.1016/j.tics.2016.07.002</a>`;
+    bibliography.appendChild(reference);
   }
 
   if (window.location.pathname.includes("/encontro-3/")) {
@@ -87,12 +100,7 @@
       const definition = document.createElement("div");
       definition.className = "implication-box";
       definition.dataset.mentalStatesDefinition = "true";
-      definition.innerHTML = `
-        <p class="thesis-label">Definição</p>
-        <h3>O que são estados mentais?</h3>
-        <p><strong>Estados mentais</strong> são condições ou episódios atribuídos a uma mente, como crenças, desejos, intenções, percepções, emoções, lembranças, expectativas e experiências conscientes. Em filosofia da mente, atribuir um estado mental a um agente significa atribuir-lhe algo que possui conteúdo ou perspectiva e que pode ajudar a explicar seu comportamento.</p>
-        <p>Não se deve, portanto, confundir <strong>estado mental</strong> com <strong>estado interno de um sistema computacional</strong>. Uma rede neural possui estados internos — ativações, vetores e configurações numéricas —, mas permanece uma questão filosófica se esses estados também devem ser interpretados como crenças, intenções, compreensão ou consciência.</p>
-      `;
+      definition.innerHTML = `<p class="thesis-label">Definição</p><h3>O que são estados mentais?</h3><p><strong>Estados mentais</strong> são condições ou episódios atribuídos a uma mente, como crenças, desejos, intenções, percepções, emoções, lembranças, expectativas e experiências conscientes. Em filosofia da mente, atribuir um estado mental a um agente significa atribuir-lhe algo que possui conteúdo ou perspectiva e que pode ajudar a explicar seu comportamento.</p><p>Não se deve, portanto, confundir <strong>estado mental</strong> com <strong>estado interno de um sistema computacional</strong>. Uma rede neural possui estados internos — ativações, vetores e configurações numéricas —, mas permanece uma questão filosófica se esses estados também devem ser interpretados como crenças, intenções, compreensão ou consciência.</p>`;
       firstThreadList.before(definition);
     }
   }
