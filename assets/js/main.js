@@ -112,17 +112,18 @@
     if (fabricioBio) fabricioBio.textContent = "É doutor em linguística geral e mestre em linguística computacional pela universidade de Tübingen (Alemanha). Mestre em língua hebraica (USP, Brasil), e bacharel em letras clássicas, grego antigo e latim, pelo PIAL (UNISAL) (Roma, Itália).";
     if (cristianeBio) cristianeBio.textContent = "Doutora em Educação em Ciência pela Unesp e mestra em Ensino de Ciências e Matemática pela UNEMAT. Graduada em Ciências Biológicas pela Universidade Federal de Mato Grosso (2002) e em Pedagogia pela Universidade do Estado de Mato Grosso (2001), é especialista em Educação Especial pela Universidade de Cuiabá (UNIC). Tem experiência na área de Educação, com ênfase em ensino-aprendizagem e interdisciplinaridade.";
 
-    const fabricioPlaceholder = instructorCards[0].querySelector(".instructor-photo-placeholder");
-    if (fabricioPlaceholder) {
+    const setPortrait = (card, src, alt) => {
+      const placeholder = card.querySelector(".instructor-photo-placeholder");
+      if (!placeholder) return;
       const image = document.createElement("img");
-      image.src = "assets/images/fabricio.png";
-      image.alt = "Dr. Fabrício Ferraz Gerardi";
+      image.src = src;
+      image.alt = alt;
       image.loading = "lazy";
       image.style.cssText = "display:block;width:100%;aspect-ratio:1/1;object-fit:contain;object-position:center;background:#14213d;";
-      fabricioPlaceholder.replaceWith(image);
-    }
+      placeholder.replaceWith(image);
+    };
 
-    const cristianePlaceholder = instructorCards[1].querySelector(".instructor-photo-placeholder");
-    if (cristianePlaceholder) cristianePlaceholder.style.minHeight = "auto";
+    setPortrait(instructorCards[0], "assets/images/fabricio.png", "Dr. Fabrício Ferraz Gerardi");
+    setPortrait(instructorCards[1], "assets/images/cristiane.jpeg", "Dra. Cristiane Poltronieri");
   }
 })();
