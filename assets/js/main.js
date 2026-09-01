@@ -109,12 +109,22 @@
   if (instructorCards.length >= 2) {
     const fabricioBio = instructorCards[0].querySelector(".instructor-profile-copy > p:last-child");
     const cristianeBio = instructorCards[1].querySelector(".instructor-profile-copy > p:last-child");
-    if (fabricioBio) fabricioBio.textContent = "É doutor em linguística geral e mestre em linguística computacional pela Universidade de Tübingen (Alemanha). Mestre em língua hebraica (USP, Brasil), e bacharel em letras clássicas, grego antigo e latim, pelo PIAL (UNISAL) (Roma, Itália).";
+    if (fabricioBio) fabricioBio.textContent = "É doutor em linguística geral e mestre em linguística computacional pela universidade de Tübingen (Alemanha). Mestre em língua hebraica (USP, Brasil), e bacharel em letras clássicas, grego antigo e latim, pelo PIAL (UNISAL) (Roma, Itália).";
     if (cristianeBio) cristianeBio.textContent = "Doutora em Educação em Ciência pela Unesp e mestra em Ensino de Ciências e Matemática pela UNEMAT. Graduada em Ciências Biológicas pela Universidade Federal de Mato Grosso (2002) e em Pedagogia pela Universidade do Estado de Mato Grosso (2001), é especialista em Educação Especial pela Universidade de Cuiabá (UNIC). Tem experiência na área de Educação, com ênfase em ensino-aprendizagem e interdisciplinaridade.";
-    instructorCards.forEach((card) => {
-      const photo = card.querySelector(".instructor-photo-placeholder");
-      if (photo) photo.style.minHeight = "clamp(13rem, 22vw, 17rem)";
-    });
+
+    const setPortrait = (card, src, alt, position = "center 30%") => {
+      const placeholder = card.querySelector(".instructor-photo-placeholder");
+      if (!placeholder) return;
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = alt;
+      image.loading = "lazy";
+      image.style.cssText = `display:block;width:100%;height:clamp(13rem,22vw,17rem);object-fit:cover;object-position:${position};`;
+      placeholder.replaceWith(image);
+    };
+
+    setPortrait(instructorCards[0], "assets/images/fabricio.png", "Dr. Fabrício Ferraz Gerardi", "center 35%");
+
     const cristianePlaceholder = instructorCards[1].querySelector(".instructor-photo-placeholder");
     if (cristianePlaceholder) {
       const image = document.createElement("img");
