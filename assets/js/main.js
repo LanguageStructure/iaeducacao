@@ -115,5 +115,14 @@
       const photo = card.querySelector(".instructor-photo-placeholder");
       if (photo) photo.style.minHeight = "clamp(13rem, 22vw, 17rem)";
     });
+    const cristianePlaceholder = instructorCards[1].querySelector(".instructor-photo-placeholder");
+    if (cristianePlaceholder) {
+      const image = document.createElement("img");
+      image.src = "assets/images/cristiane-poltronieri.jpg";
+      image.alt = "Dra. Cristiane Poltronieri";
+      image.loading = "lazy";
+      image.style.cssText = "display:block;width:100%;height:clamp(13rem,22vw,17rem);object-fit:cover;object-position:center 30%;";
+      cristianePlaceholder.replaceWith(image);
+    }
   }
 })();
