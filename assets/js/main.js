@@ -15,7 +15,35 @@
     "06": { href: "encontro-6/", label: "Acessar roteiro, conceitos e atividade" },
     "07": { href: "encontro-7/", label: "Acessar evidências, conceitos e atividade" },
   };
-  document.querySelectorAll(".timeline-item").forEach((item) => { const number = item.querySelector(".timeline-index span")?.textContent?.trim(); const config = meetingLinks[number]; const content = item.querySelector(".timeline-content"); if (!config || !content || content.querySelector(".text-link")) return; item.classList.add("is-featured"); const link = document.createElement("a"); link.className = "text-link"; link.href = config.href; link.innerHTML = `${config.label} <span>→</span>`; content.appendChild(link); });
+  document.querySelectorAll(".timeline-item").forEach((item) => {
+    const number = item.querySelector(".timeline-index span")?.textContent?.trim();
+    const config = meetingLinks[number];
+    const content = item.querySelector(".timeline-content");
+    if (!config || !content) return;
+    item.classList.add("is-featured");
+    if (!content.querySelector(".text-link")) {
+      const link = document.createElement("a");
+      link.className = "text-link";
+      link.href = config.href;
+      link.innerHTML = `${config.label} <span>→</span>`;
+      content.appendChild(link);
+    }
+  });
+
+  /* Defensive fallback for Encontro 7: highlight it even if the timeline markup changes slightly. */
+  document.querySelectorAll("#cronograma .timeline-item").forEach((item) => {
+    const text = item.textContent || "";
+    if (!text.includes("Desempenho não é aprendizagem")) return;
+    item.classList.add("is-featured");
+    const content = item.querySelector(".timeline-content") || item;
+    if (!content.querySelector('a[href="encontro-7/"]')) {
+      const link = document.createElement("a");
+      link.className = "text-link";
+      link.href = "encontro-7/";
+      link.innerHTML = `Acessar evidências, conceitos e atividade <span>→</span>`;
+      content.appendChild(link);
+    }
+  });
 
   const bibliography = document.querySelector("#bibliografia .bibliography-list");
   const addReference = (key, html) => { if (!bibliography || bibliography.querySelector(`[data-${key}]`)) return; const reference = document.createElement("article"); reference.className = "reference"; reference.setAttribute(`data-${key}`, "true"); reference.innerHTML = html; bibliography.appendChild(reference); };
