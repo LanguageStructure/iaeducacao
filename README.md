@@ -61,6 +61,24 @@ A página explica probabilidade, tokens, treinamento, embeddings, Transformers, 
 - **Encontro 4 — Verdade, erro e “alucinação”**: factualidade, fidelidade, justificação, a discussão sobre *bullshit* e uma atividade de autópsia epistemológica de respostas de IA.
 - **Encontro 5 — Para que educamos?**: Hannah Arendt e Gert Biesta, mundo comum, natalidade, qualificação, socialização e subjetivação, com uma atividade de desenho de política de uso de IA a partir das finalidades educacionais.
 
+## Atualização bibliográfica (novembro de 2026)
+
+As leituras dos encontros 8 a 14 foram substituídas por literatura de 2024–2026, e os encontros 4, 6 e 7 receberam leituras complementares recentes. Os clássicos (Platão, Turing, Searle, Clark & Chalmers) e o Encontro 5 (Arendt e Biesta) foram mantidos sem alteração.
+
+| Encontro | Leitura principal | Leitura complementar |
+|---|---|---|
+| 4 | Hicks, Humphries & Slater (2024) | Kalai et al. (2025) |
+| 6 | Clark & Chalmers (1998) | Risko & Gilbert (2016); pesquisa recente: Lee et al. (2025) |
+| 8 | Wang et al. (2025), Tutor CoPilot | De Simone et al. (2025), Banco Mundial |
+| 9 | Selwyn (2024) | Miao & Cukurova / UNESCO (2024) |
+| 10 | Hofmann et al. (2024), *Nature* | Bulathwela et al. (2024) |
+| 11 | Perkins et al. (2024), AIAS | Weber-Wulff et al. (2023) |
+| 12 | Corbin, Dawson & Liu (2025) | Fan et al. (2025) |
+| 13 | Resolução CNE/CP nº 1/2026 | OCDE (2026) |
+| 14 | Weidlich et al. (2025) | Lawson et al. (2026) |
+
+Removidas por obsolescência ou substituição: Kasneci et al. (2023), Tlili et al. (2023), Cotton et al. (2024). Holmes et al. (2022) e UNESCO (2023) permanecem como documentos de referência. As páginas dos encontros 8–15 são geradas por um script de apoio; edite o HTML diretamente se preferir.
+
 ## Avaliação e uso de IA
 
 A disciplina combina notas de leitura, autópsia epistemológica de uma resposta de IA, debate ou seminário e projeto final. Cada atividade indicará se a IA não é permitida, é permitida com declaração ou é requerida. O estudante permanece responsável pela exatidão, argumentação e autoria.

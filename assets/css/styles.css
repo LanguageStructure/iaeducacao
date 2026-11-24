@@ -2028,3 +2028,70 @@ h2 {
     text-decoration: underline;
   }
 }
+
+/* ---- Atualização nov. 2026: notas de atualização, leituras extras e navegação entre encontros ---- */
+.update-note {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: rgb(255 253 248 / 78%);
+  border: 1px solid rgb(255 253 248 / 30%);
+  border-radius: 999px;
+}
+
+.band-note {
+  font-size: 0.92rem;
+}
+
+.further-reading {
+  margin-top: 2.5rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--paper-deep);
+  border-left: 4px solid var(--sage);
+}
+
+.further-reading ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.further-reading li + li {
+  margin-top: 0.6rem;
+}
+
+.further-reading a {
+  color: var(--accent-dark);
+  overflow-wrap: anywhere;
+}
+
+.meeting-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.meeting-pager a {
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.meeting-pager a:hover,
+.meeting-pager a:focus-visible {
+  color: var(--accent-dark);
+}
+
+.reference-group {
+  grid-column: 1 / -1;
+  margin: 1.5rem 0 0.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
