@@ -2095,3 +2095,16 @@ h2 {
   text-transform: uppercase;
   color: var(--accent-dark);
 }
+
+/* Bibliografia mais compacta */
+.bibliography-list .reference {
+  padding: 1.15rem 0;
+}
+
+.bibliography-list .reference h3 {
+  margin-bottom: 0.25rem;
+}
+
+.bibliography-list .reference p {
+  margin: 0 0 0.35rem;
+}
