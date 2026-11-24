@@ -2108,3 +2108,24 @@ h2 {
 .bibliography-list .reference p {
   margin: 0 0 0.35rem;
 }
+
+/* Fotos dos ministrantes em tamanho reduzido */
+.instructor-photo {
+  display: block;
+  width: 168px;
+  height: 168px;
+  margin: 2.5rem 2.5rem 0;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  box-shadow: 0 10px 30px rgb(11 20 42 / 14%);
+}
+
+@media (max-width: 640px) {
+  .instructor-photo {
+    width: 128px;
+    height: 128px;
+    margin: 1.75rem 1.6rem 0;
+  }
+}
